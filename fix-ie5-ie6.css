@@ -1,0 +1,86 @@
+/* new test */
+#thePage { height: 100%;}
+#content {overflow:none;}
+#thumbnails li { overflow: none;}
+#thumbnails_block2 {position:static;}
+
+/* old IE fix */
+
+#thumbnails img {
+	margin:10px;
+	width: expression(this.width > 128 ? 128: true);
+	height: expression(this.width > 128 ? 128: true);
+}
+.arrow {
+	display:none;
+}
+
+/* Issues in IE from 5 to 6 only not to be used with IE7 */
+
+#menuswitcher {
+	display:none;
+}
+
+#the_page,
+#content {
+	width:1120px;
+}
+
+#menubar,
+#menubar_container {
+	display:block!important;
+	float:left;
+}
+
+#content_cell {
+	float:right;
+	width:940px;
+}
+
+#thumbnails_block1 {
+	width:940px;
+	float:right;
+}
+
+.thumbnailCategories {
+	width:900px;
+	float:right;
+	margin-bottom:5px;
+}
+.personal_block ul.thumbnailCategories {
+	width:180px!important;
+}
+
+.stuffs_block .personal_block ul.thumbnailCategories {
+	float:left;
+}
+
+.stuffs .two_comment {
+		float:left;
+		width:47%!important;
+}
+
+/* to avoid vanishing objects in IE6 */
+H1, #theHeader {
+  width: 100%;	/* <- useless but seems to make IE6 happy */
+}
+.content {
+  height: 1em;	/* for IE6 it's like min-height */
+}
+
+/* fix category thumbnails on main page */
+.content UL.thumbnailCategories {
+  width: 99%;	/* buggy IE box model */
+}
+
+
+/* fix quickconnect layout */
+FORM#quickconnect FIELDSET {
+  width: 99%;	/* correct an ugly 1 or 2 px misalignement with IE */
+}
+
+#thumb_navigation {
+	display:none;
+}
+
+#thePicturePage #footer {display: none;}

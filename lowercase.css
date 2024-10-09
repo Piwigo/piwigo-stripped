@@ -1,0 +1,4 @@
+input[type="submit"], input[type="reset"],
+#the_page  {
+	text-transform:lowercase;
+}

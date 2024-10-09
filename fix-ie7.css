@@ -1,0 +1,48 @@
+/* Fix for IE < 8 */
+
+#content_cell {
+	width:auto;
+}
+
+.thumbnailCategories {
+	margin-bottom:5px;
+}
+
+.stuffs_block .personal_block  {
+	overflow:auto;
+}
+
+.stuffs_block .personal_block ul.thumbnailCategories {
+	float:left;
+}
+/* */
+
+.wrap1 .wrap2,
+.thumbnailCategory .illustration {
+  display: block;
+  position: relative;
+  text-align: left;
+}
+
+.wrap1 .wrap2 A,
+.wrap1 .wrap2 SPAN,
+.thumbnailCategory .illustration A,
+.thumbnailCategory .illustration SPAN {
+  width:170px;
+  position: absolute;
+	top: 50%; 
+  text-align: center;
+  overflow:visible;
+  height:auto;
+}
+
+.wrap1 .wrap2 img,
+.thumbnailCategory .illustration img {
+  position: relative;
+  top: -60px; 
+}
+.thumbnailCategory .description H3 {
+	line-height:20px !important;
+}
+
+#theImg {display:inline;}
