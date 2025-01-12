@@ -1674,3 +1674,6 @@ table#TagsTable	{margin:auto;}
   .date_posted-option input:checked + label .checked-icon{
     margin-top:0;
   }
+  .filter-form{
+    z-index: 99;
+  }

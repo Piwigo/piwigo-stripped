@@ -32,6 +32,16 @@
 	{/if}
 	{if ($GMaps_loaded)}<div id="text_gmaps" style="display:none">{'GMap'|@translate}</div>{/if}
 </div>
+  {if isset($SEARCH_IN_SET_BUTTON) and $SEARCH_IN_SET_BUTTON}
+    <div class="mcs-side-results search-in-set-button">
+      <div>
+      <p><a href="{$SEARCH_IN_SET_URL}" class="gallery-icon-search-folder">{'Search in this set'|translate}</a></p>
+      </div>
+    </div>
+  {/if}
+  {if !empty($SEARCH_ID)}
+    {include file='themes/default/template/include/search_filters.inc.tpl'}
+  {/if}
 <div id="content" {if !$stripped.hideMenu}class="menuShown"{/if}>
 	{$MENUBAR}
 	<div id="content_cell">
@@ -77,14 +87,6 @@
 				{include file=$FILE_CHRONOLOGY_VIEW}
 			{/if}
 
-			{if isset($SEARCH_IN_SET_BUTTON) and $SEARCH_IN_SET_BUTTON}
-				<div class="mcs-side-results search-in-set-button">
-				  <div>
-				  <p><a href="{$SEARCH_IN_SET_URL}" class="gallery-icon-search-folder">{'Search in this set'|translate}</a></p>
-				  </div>
-				</div>
-			{/if}
-
 			{if !empty($CONTENT_DESCRIPTION) }
 				<div class="content_block"><div class="additional_info">
 					{$CONTENT_DESCRIPTION}
@@ -95,10 +97,6 @@
       {if !empty($cats_navbar)}
         {include file='navigation_bar.tpl'|@get_extent:'navbar' navbar=$cats_navbar}
       {/if}
-
-	  {if !empty($SEARCH_ID)}
-		{include file='themes/default/template/include/search_filters.inc.tpl'}
-	  {/if}
 
 			{if !empty($THUMBNAILS) }
 				<div id="thumbnails_block1">

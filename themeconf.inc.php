@@ -3,7 +3,7 @@
 Theme Name: stripped
 Version: auto
 Description: stripped Theme
-Theme URI: http://piwigo.org/ext/extension_view.php?eid=471
+Theme URI: https://piwigo.org/ext/extension_view.php?eid=471
 Author: Julien Capitaine (Zaphod on Piwigo forums)
 Author URI: http://www.audreyetjulien.fr/galerie
 */
