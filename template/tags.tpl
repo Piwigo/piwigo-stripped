@@ -24,14 +24,14 @@
 	{if isset($MENUBAR)}{$MENUBAR}{/if}
 	<div id="content_cell">
 		<div class="content_block">
-				{if $display_mode == 'cloud'}
+				{if $display_mode == 'cloud' and isset($tags)}
 					<div id="fullTagCloud">
 						{foreach from=$tags item=tag}
 							<span><a href="{$tag.URL}" class="tagLevel{$tag.level}" title="{$tag.counter|translate_dec:'%d photo':'%d photos'}">{$tag.name}</a></span>
 						{/foreach}
 					</div>
 				{/if}
-				{if $display_mode == 'letters'}
+				{if $display_mode == 'letters' and isset($letters)}
 					<table>
 						<tr>
 							<td valign="top">
