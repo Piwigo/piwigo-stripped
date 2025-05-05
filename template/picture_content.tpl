@@ -26,7 +26,7 @@
 			{assign var='displayHD' value=true}
 		{/if}
 	{/if}
-	{if ($stripped.forceLightboxOn)}
+	{if isset($stripped.forceLightboxOn) and ($stripped.forceLightboxOn)}
 		{assign var='displayHD' value=true}
 		{if !isset($HD_url)}
 			{assign var='HD_url' value=$derivative->get_url()}

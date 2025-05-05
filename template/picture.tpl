@@ -173,7 +173,7 @@ jQuery().ready(function() {
 		{if $display_info.visits}{assign var='display_count' value=$display_count+1}{/if}
 		{if $display_info.rating_score and isset($rate_summary) }{assign var='display_count' value=$display_count+1}{/if}
 		{if isset($rating)}{assign var='display_count' value=$display_count+1}{/if}
-		{if $display_info.privacy_level and isset($available_permission_levels) }{assign var='display_count' value=$display_count+1}{/if}
+		{if isset($display_info.privacy_level) and $display_info.privacy_level and isset($available_permission_levels) }{assign var='display_count' value=$display_count+1}{/if}
 		{if (($display_count > 0) && ((isset($U_ADMIN)) || ($stripped.infoTabAdminOnly == false)))}
 			{assign var='display_info_panel' value=true}
 		{/if}
@@ -344,7 +344,7 @@ jQuery().ready(function() {
 </dl>
 				
 					<table id="standard" class="infoTable">
-						{if $display_info.privacy_level and isset($available_permission_levels)}
+						{if isset($display_info.privacy_level) and $display_info.privacy_level and isset($available_permission_levels)}
 							<tr id="Privacy">
 								<td class="label">{'Who can see this photo?'|@translate}</td>
 								<td class="value">
