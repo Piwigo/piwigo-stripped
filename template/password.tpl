@@ -27,6 +27,17 @@
 							</label>
 						</p>
 						<p class="bottomButtons"><input class="submit" type="submit" name="submit" value="{'Change my password'|@translate}"></p>
+					{elseif $action eq 'lost_code'}
+    				<div>
+    				  <div class="message" style="font-size: 12px; margin-bottom: 15px;">{"If you do not receive the email, please contact your webmaster."|translate}</div>
+    				  <label>
+    				    {'Verification code'|@translate}
+    				    <br>
+    				    <input type="text" id="user_code" name="user_code" size="100" />
+    				  </label>
+
+    				<p class="bottomButtons"><input type="submit" name="submit" value="{'Verify'|@translate}"></p>
+    				</div>
 					{elseif $action eq 'reset'}
 						<div class="message">{'Hello'|@translate} <em>{$username}</em>. {'Enter your new password below.'|@translate}</div>
 						<p>
