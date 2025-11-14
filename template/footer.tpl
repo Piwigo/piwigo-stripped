@@ -4,7 +4,7 @@
 						<div class="footer_login">
 							{if isset($U_PROFILE)}
 								<div class="footer_customize">
-									[<a href="{$U_PROFILE}" title="{'customize the appareance of the gallery'|@translate}">{$USERNAME}</a>]&nbsp;
+									[<a href="{$U_PROFILE}" title="{'edit user preferences'|@translate}">{$USERNAME}</a>]&nbsp;
 								</div>
 							{else}
 								[{$USERNAME}]&nbsp;
